@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Chúc mừng 20/10</title>
+    <link rel="icon" type="image/svg+xml" href="giftbox.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="gift" id="gift">
+            <div class="gift-box" id="giftBtn" role="button" tabindex="0" aria-label="Mở hộp quà">
+                <div class="ribbon"></div>
+                <div class="bow"><span></span><span></span></div>
+                <div class="box-shadow"></div>
+                <span class="gift-text">Ấn để mở</span>
+            </div>
+
+            <div class="card" aria-hidden="true">
+                <h1 class="title">Chúc mừng 20/10</h1>
+                <p class="subtitle">Gửi tới những người phụ nữ tuyệt vời trong cuộc sống</p>
+
+                <div class="flowers" aria-hidden="true">
+                    <div class="flower f1"></div>
+                    <div class="flower f2"></div>
+                    <div class="flower f3"></div>
+                </div>
+
+                <div class="message">
+                    <p>
+                        Tháng mười rực rỡ sắc hoa<br>
+                        Nụ cười duyên dáng ngàn thu vẫn còn.<br>
+                        Bao năm tần tảo sớm hôm,<br>
+                        Gieo yêu thương thắm, dệt hồn quê hương.<br><br>
+
+                        Nụ cười rạng rỡ muôn phương,<br>
+                        Dịu dàng mà vẫn kiên cường vững tin.<br>
+                        Hôm nay rạng rỡ bình minh,<br>
+                        Xin dâng lời chúc ân tình đậm sâu.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- generate a number of small petal elements for CSS animation -->
+        <div class="petals" aria-hidden="true">
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+            <span class="petal"></span>
+        </div>
+    </main>
+    <script>
+        (function () {
+            var gift = document.getElementById('gift');
+            var btn = document.getElementById('giftBtn');
+            if (!gift || !btn) return;
+            function openGift() {
+                gift.classList.add('open');
+                // reveal card for accessibility
+                var card = gift.querySelector('.card');
+                if (card) card.removeAttribute('aria-hidden');
+            }
+            btn.addEventListener('click', openGift);
+            btn.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') openGift();
+            });
+        })();
+    </script>
+</body>
+
+</html>
